@@ -87,6 +87,13 @@ mvn test
 `EmployeeApiTest` boots the full app on a random port and exercises
 create-then-fetch plus the validation path.
 
+## Postman Collection
+
+Import `machine-coding.postman_collection.json` directly into Postman.
+- **Base URL Variable**: `{{baseUrl}}` defaults to `http://localhost:8080`
+- **Dynamic ID Storage**: Running "Create Employee" automatically saves the generated ID into `{{employeeId}}` for subsequent requests.
+- Contains all success workflows and error handling scenarios (400, 404, 409).
+
 ## Design notes
 
 - Controller -> Service -> Repository interface -> in-memory implementation.
